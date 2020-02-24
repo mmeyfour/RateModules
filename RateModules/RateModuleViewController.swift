@@ -11,10 +11,13 @@ import UIKit
 class RateModuleViewController: UITableViewController {
     
     var state = State(module: Module.module3B)
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = Module.module3B.rawValue
+        
     }
     
     private func update(selectedQuestion: Question, with value: Bool) {
@@ -87,6 +90,7 @@ extension RateModuleViewController {
         cell.delegate = self
         
         let question: Question?
+        
         switch section {
         case 0:
             if state.hasDesignSection {
@@ -119,21 +123,21 @@ extension RateModuleViewController {
         if let question = question {
             cell.configure(with: question)
         }
-        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableCell(withIdentifier: "RateModuleSectionHeader")!
+        
         switch section {
             case 0:
-                header.textLabel?.text = state.hasDesignSection ? "Diseño" : "Requisitos"
+                header.textLabel?.text = state.hasDesignSection ? "Diseño(\(state.designQuestions?.count ?? 0))" : "Requisitos"
             case 1:
-                header.textLabel?.text = state.hasDesignSection ? "Requisitos" : "Estructura de código"
+                header.textLabel?.text = state.hasDesignSection ? "Requisitos(\(state.requirementsQuestions.count))" : "Estructura de código"
             case 2:
-                header.textLabel?.text = state.hasDesignSection ? "Estructura de código": "Código limpio"
+                header.textLabel?.text = state.hasDesignSection ? "Estructura de código(\(state.codeStructureQuestions.count))": "Código limpio"
             case 3:
-                header.textLabel?.text = state.hasDesignSection ? "Código limpio" : ""
+                header.textLabel?.text = state.hasDesignSection ? "Código limpio(\(state.cleanCodeQuestions.count))" : ""
             default:
                 fatalError("Unexpected section")
         }

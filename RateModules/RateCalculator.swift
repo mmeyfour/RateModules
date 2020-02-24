@@ -45,4 +45,6 @@ struct RateCalculator {
     var rateAsPercent: Double {
         return totalRatio * 100.0
     }
+
 }
+
