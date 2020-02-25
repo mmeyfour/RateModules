@@ -95,6 +95,7 @@ extension RateModuleViewController {
         case 0:
             if state.hasDesignSection {
                 question = state.designQuestions![indexPath.row]
+                print("\(indexPath.row + 1) / \(state.designQuestions?.count ?? 0)")
             } else {
                 question = state.requirementsQuestions[indexPath.row]
             }

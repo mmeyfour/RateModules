@@ -28,6 +28,7 @@ class QuestionTableViewCell: UITableViewCell {
         titleLabel.text = question.title
         descriptionLabel.text = question.description
         isPassedSwitch.isOn = question.isPassed
+        
     }
     
 }

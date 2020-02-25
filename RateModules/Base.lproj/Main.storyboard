@@ -40,15 +40,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="¿Compila el proyecto sin errores?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCq-vg-NQ2">
-                                            <rect key="frame" x="16" y="11" width="286" height="60"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="286" id="Ngo-rA-Cs3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-fC-cS9">
+                                            <rect key="frame" x="16" y="11" width="286" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0/0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTQ-J8-DBs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="48"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="¿Compila el proyecto sin errores?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCq-vg-NQ2">
+                                                    <rect key="frame" x="56" y="0.0" width="230" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="230" id="gz0-3X-Kb0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existe un proyecto de Xcode que puede compilarse sin errores (sin triángulos rojos tras el proceso de &quot;Build&quot;)." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1H-C6-krH">
                                             <rect key="frame" x="16" y="79" width="343" height="61"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,15 +74,16 @@
                                         </switch>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="i1H-C6-krH" firstAttribute="top" secondItem="cCq-vg-NQ2" secondAttribute="bottom" constant="8" id="33z-Sf-yq8"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="i1H-C6-krH" secondAttribute="bottom" constant="8" id="5th-Kg-xAI"/>
-                                        <constraint firstItem="cCq-vg-NQ2" firstAttribute="top" secondItem="eIY-2B-ael" secondAttribute="topMargin" id="Mm2-cs-yPS"/>
-                                        <constraint firstItem="GxR-zt-Za9" firstAttribute="leading" secondItem="cCq-vg-NQ2" secondAttribute="trailing" constant="8" id="QSG-pk-x9f"/>
+                                        <constraint firstItem="GxR-zt-Za9" firstAttribute="leading" secondItem="i1H-C6-krH" secondAttribute="trailing" constant="-49" id="8Ml-h4-7rP"/>
+                                        <constraint firstItem="6ip-fC-cS9" firstAttribute="leading" secondItem="eIY-2B-ael" secondAttribute="leading" constant="16" id="NBQ-b0-Xba"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="GxR-zt-Za9" secondAttribute="trailing" id="QuH-1W-HLZ"/>
                                         <constraint firstItem="i1H-C6-krH" firstAttribute="leading" secondItem="eIY-2B-ael" secondAttribute="leadingMargin" id="R2c-Kw-5hY"/>
                                         <constraint firstItem="i1H-C6-krH" firstAttribute="trailing" secondItem="eIY-2B-ael" secondAttribute="trailingMargin" id="U4g-54-V7M"/>
-                                        <constraint firstItem="cCq-vg-NQ2" firstAttribute="leading" secondItem="eIY-2B-ael" secondAttribute="leadingMargin" id="Uaz-51-Egv"/>
-                                        <constraint firstItem="GxR-zt-Za9" firstAttribute="top" secondItem="cCq-vg-NQ2" secondAttribute="firstBaseline" id="pwR-R0-lJc"/>
+                                        <constraint firstItem="6ip-fC-cS9" firstAttribute="top" secondItem="eIY-2B-ael" secondAttribute="top" constant="11" id="cKR-ee-kpi"/>
+                                        <constraint firstItem="GxR-zt-Za9" firstAttribute="top" secondItem="eIY-2B-ael" secondAttribute="top" constant="30" id="p53-YJ-gkq"/>
+                                        <constraint firstItem="i1H-C6-krH" firstAttribute="top" secondItem="cCq-vg-NQ2" secondAttribute="bottom" constant="20" id="vp8-ge-lQV"/>
+                                        <constraint firstAttribute="trailing" secondItem="6ip-fC-cS9" secondAttribute="trailing" constant="73" id="yqj-Ps-JYx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -96,7 +108,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2f-ag-kxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="-287"/>
+            <point key="canvasLocation" x="293.60000000000002" y="-287.40629685157421"/>
         </scene>
         <!--Rate Results View Controller-->
         <scene sceneID="qvo-RD-9LB">
@@ -169,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg0-0m-UPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="-287"/>
+            <point key="canvasLocation" x="1182" y="-286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kEC-Ve-9YN">
