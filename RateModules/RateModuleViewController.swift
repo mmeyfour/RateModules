@@ -89,31 +89,36 @@ extension RateModuleViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as! QuestionTableViewCell
         cell.delegate = self
         
-        let question: Question?
+        var question: Question?
         
         switch section {
         case 0:
             if state.hasDesignSection {
                 question = state.designQuestions![indexPath.row]
-                print("\(indexPath.row + 1) / \(state.designQuestions?.count ?? 0)")
+// MARK: - PREGUNTA 2
+                question?.titleNumber = "(\(String(indexPath.row + 1)) / \(state.designQuestions?.count ?? 0))"
+                
             } else {
                 question = state.requirementsQuestions[indexPath.row]
             }
         case 1:
             if state.hasDesignSection {
                 question = state.requirementsQuestions[indexPath.row]
+                question?.titleNumber = "(\(String(indexPath.row + 1)) / \(state.requirementsQuestions.count))"
             } else {
                 question = state.codeStructureQuestions[indexPath.row]
             }
         case 2:
             if state.hasDesignSection {
                 question = state.codeStructureQuestions[indexPath.row]
+                question?.titleNumber = "(\(String(indexPath.row + 1)) / \(state.codeStructureQuestions.count))"
             } else {
                 question = state.cleanCodeQuestions[indexPath.row]
             }
         case 3:
             if state.hasDesignSection {
                 question = state.cleanCodeQuestions[indexPath.row]
+                question?.titleNumber = "(\(String(indexPath.row + 1)) / \(state.cleanCodeQuestions.count))"
             } else {
                 question = nil
             }

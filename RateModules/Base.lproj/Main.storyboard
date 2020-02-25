@@ -40,20 +40,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-fC-cS9">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-fC-cS9">
                                             <rect key="frame" x="16" y="11" width="286" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0/0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTQ-J8-DBs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="48"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Eqp-q2-abS"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="¿Compila el proyecto sin errores?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCq-vg-NQ2">
-                                                    <rect key="frame" x="56" y="0.0" width="230" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="230" id="gz0-3X-Kb0"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="64" y="0.0" width="222" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -89,6 +89,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="i1H-C6-krH" id="zl3-zS-q7o"/>
                                     <outlet property="isPassedSwitch" destination="GxR-zt-Za9" id="ZYP-B3-l7i"/>
+                                    <outlet property="numberLabel" destination="WTQ-J8-DBs" id="ALx-pN-g1f"/>
                                     <outlet property="titleLabel" destination="cCq-vg-NQ2" id="1jL-eD-BAu"/>
                                 </connections>
                             </tableViewCell>

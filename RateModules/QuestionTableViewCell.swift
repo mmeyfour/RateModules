@@ -17,6 +17,7 @@ class QuestionTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var isPassedSwitch: UISwitch!
+    @IBOutlet weak var numberLabel: UILabel!
     
     @IBAction func didToggleSwitch(_ sender: UISwitch) {
         guard let question = question else { return }
@@ -28,7 +29,7 @@ class QuestionTableViewCell: UITableViewCell {
         titleLabel.text = question.title
         descriptionLabel.text = question.description
         isPassedSwitch.isOn = question.isPassed
-        
+        numberLabel.text = question.titleNumber
     }
     
 }

@@ -12,4 +12,5 @@ struct Question {
     let title: String
     let description: String
     var isPassed: Bool = true
+    var titleNumber = "(0/0)"
 }
