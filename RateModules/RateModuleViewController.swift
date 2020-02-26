@@ -20,7 +20,6 @@ class RateModuleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let optionChosed = modulChused {
-            state = State(module: optionChosed)
             navigationItem.title = optionChosed.rawValue
         }
     }
