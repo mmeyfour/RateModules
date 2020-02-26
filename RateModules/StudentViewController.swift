@@ -19,18 +19,15 @@ class StudentViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
-    @IBOutlet weak var modulePicker: UIPickerView!
-    
     @IBOutlet weak var button: UIButton!
-    
+    // MARK: - IBAction
     @IBAction func didRightName(_ sender: Any) {
         button.isEnabled = true
     }
     @IBAction func didTappedButton(_ sender: UIButton) {
         performSegue(withIdentifier: RateModuleViewController.rateModuleSegue, sender: self)
+        // MARK: - Function
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +54,7 @@ class StudentViewController: UIViewController {
         rateModuleViewController.lastName = lastNameTextField.text
         rateModuleViewController.modulChused = modulChused
     }
+    // MARK: - Unwind
     @IBAction func unwindToStudent(_ unwindSegue: UIStoryboardSegue) {
     }
     /*
@@ -65,7 +63,7 @@ class StudentViewController: UIViewController {
      }
      */
 }
-
+// MARK: - Extension
 extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
