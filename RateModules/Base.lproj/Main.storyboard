@@ -120,40 +120,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eki-ee-zi8">
-                                <rect key="frame" x="67.5" y="254" width="240.5" height="203"/>
+                                <rect key="frame" x="67.5" y="244" width="240.5" height="223.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-vW-cJy" userLabel="Student Name">
+                                        <rect key="frame" x="0.0" y="0.0" width="240.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x19-Pa-B1T">
-                                        <rect key="frame" x="0.0" y="0.0" width="240.5" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="240.5" height="100.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8k-iY-JEB">
-                                        <rect key="frame" x="0.0" y="100.5" width="240.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="121" width="240.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de diseño: 3/5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji6-AB-wt5">
-                                        <rect key="frame" x="0.0" y="121" width="240.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de requisitos: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-Td-dJK">
                                         <rect key="frame" x="0.0" y="141.5" width="240.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de estructura: 2/4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOY-Pf-9Zm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de requisitos: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHX-Td-dJK">
                                         <rect key="frame" x="0.0" y="162" width="240.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de código limpio: 1/3" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kso-XL-uvQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de estructura: 2/4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOY-Pf-9Zm">
                                         <rect key="frame" x="0.0" y="182.5" width="240.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preguntas de código limpio: 1/3" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kso-XL-uvQ">
+                                        <rect key="frame" x="0.0" y="203" width="240.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -178,6 +184,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="StudentName" destination="Xd9-vW-cJy" id="9Ee-OZ-vUq"/>
                         <outlet property="cleanCodeRatioLabel" destination="Kso-XL-uvQ" id="HmV-BT-OK2"/>
                         <outlet property="codeStructureRatioLabel" destination="IOY-Pf-9Zm" id="uOe-dP-2su"/>
                         <outlet property="designRatioLabel" destination="Ji6-AB-wt5" id="i3w-L2-xyC"/>
@@ -254,7 +261,6 @@
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="didTappedButton:" destination="TCm-Zd-zw3" eventType="touchUpInside" id="lwt-35-dxv"/>
-                                            <segue destination="7F2-t0-enr" kind="presentation" modalPresentationStyle="fullScreen" id="VuO-b0-Sb9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -271,15 +277,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="jf1-XF-UDx"/>
                     <connections>
-                        <outlet property="Button" destination="xdP-W4-GoL" id="tjj-JF-Oyy"/>
+                        <outlet property="button" destination="xdP-W4-GoL" id="tjj-JF-Oyy"/>
                         <outlet property="firstNameTextField" destination="9vy-Fv-wDZ" id="hg0-yA-jXW"/>
                         <outlet property="lastNameTextField" destination="k2M-7p-rsn" id="AUp-lq-XFm"/>
-                        <outlet property="modulePicker" destination="zU9-A2-5SC" id="9rG-Gk-NpV"/>
+                        <segue destination="saZ-Bz-K9g" kind="show" identifier="showRateModule" id="Uak-KK-85l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yal-lU-UCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1439.2" y="-287.40629685157421"/>
+            <point key="canvasLocation" x="-562" y="-287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1EV-1I-UgJ">
@@ -295,24 +301,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uX-di-JN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2305" y="-287"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kEC-Ve-9YN">
-            <objects>
-                <navigationController id="7F2-t0-enr" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vwc-fN-HAU"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wuK-CF-Odp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="saZ-Bz-K9g" kind="relationship" relationship="rootViewController" id="nkW-oK-ua2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TKF-4f-i9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-511" y="-286"/>
+            <point key="canvasLocation" x="-1430" y="-287"/>
         </scene>
     </scenes>
 </document>

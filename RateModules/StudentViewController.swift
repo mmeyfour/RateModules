@@ -13,8 +13,10 @@ class StudentViewController: UIViewController {
     // MARK: - Variables
     let module: [Module] = [.module2A,.module2B,.module3A,.module3B]
     var optionChosed: Module = .module2A
+    
     var firstName = ""
     var lastName = ""
+    
     // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
     
@@ -22,27 +24,24 @@ class StudentViewController: UIViewController {
     
     @IBOutlet weak var modulePicker: UIPickerView!
     
-    @IBOutlet weak var Button: UIButton!
+    @IBOutlet weak var button: UIButton!
     
     @IBAction func didRightName(_ sender: Any) {
-        Button.isEnabled = true
     }
     @IBAction func didTappedButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "RateResultsViewController", sender: self)
-        firstName = firstNameTextField.text!
-        lastName = lastNameTextField.text!
+        performSegue(withIdentifier: RateModuleViewController.rateModuleSegue, sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //firstNameTextField.delegate = self
-        //lastNameTextField.delegate = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         firstNameTextField.text = ""
         lastNameTextField.text = ""
-        Button.isEnabled = false
+        button.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,3 +75,14 @@ extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
+extension StudentViewController: UITextFieldDelegate {
+    func textField(_ texField: UITextField) -> Bool {
+        texField.resignFirstResponder()
+        if firstNameTextField.text == "" && lastNameTextField.text == "" {
+            button.isEnabled = false
+        } else {
+            button.isEnabled = true
+        }
+        return true
+    }
+}
