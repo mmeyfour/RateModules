@@ -184,13 +184,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="StudentName" destination="Xd9-vW-cJy" id="9Ee-OZ-vUq"/>
                         <outlet property="cleanCodeRatioLabel" destination="Kso-XL-uvQ" id="HmV-BT-OK2"/>
                         <outlet property="codeStructureRatioLabel" destination="IOY-Pf-9Zm" id="uOe-dP-2su"/>
                         <outlet property="designRatioLabel" destination="Ji6-AB-wt5" id="i3w-L2-xyC"/>
                         <outlet property="rateAsPercentLabel" destination="m8k-iY-JEB" id="Xvn-32-a7G"/>
                         <outlet property="requirementsRatioLabel" destination="pHX-Td-dJK" id="J4h-Sv-SdR"/>
                         <outlet property="resultEmojiLabel" destination="x19-Pa-B1T" id="iA4-w9-vhb"/>
+                        <outlet property="studentNameLabel" destination="Xd9-vW-cJy" id="9Ee-OZ-vUq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg0-0m-UPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

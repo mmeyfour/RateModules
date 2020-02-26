@@ -12,8 +12,9 @@ class RateResultsViewController: UIViewController {
     
     var rateCalculator: RateCalculator?
     
-    var firstName: String?
-    var lastName: String?
+    var firstName = ""
+    var lastName = ""
+    var modulChused : Module?
     
     @IBOutlet weak var resultEmojiLabel: UILabel!
     @IBOutlet weak var rateAsPercentLabel: UILabel!
@@ -21,7 +22,7 @@ class RateResultsViewController: UIViewController {
     @IBOutlet weak var requirementsRatioLabel: UILabel!
     @IBOutlet weak var codeStructureRatioLabel: UILabel!
     @IBOutlet weak var cleanCodeRatioLabel: UILabel!
-    @IBOutlet weak var StudentName: UILabel!
+    @IBOutlet weak var studentNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class RateResultsViewController: UIViewController {
         } else {
             resultEmojiLabel.text = "😔"
         }
-        StudentName.text = firstName
+        studentNameLabel.text = "\(firstName) \(lastName)"
         rateAsPercentLabel.text = NSString.init(format: "%.2f", rateCalculator.rateAsPercent) as String + " %"
         if !rateCalculator.hasPassed {
             rateAsPercentLabel.textColor = .red

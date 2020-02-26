@@ -11,7 +11,7 @@ import UIKit
 class RateModuleViewController: UITableViewController {
     
     var state = State(module: Module.module3B)
-    var optionChosed: Module?
+    var modulChused: Module?
     var firstName: String?
     var lastName: String?
     
@@ -19,9 +19,9 @@ class RateModuleViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let optionChosed = optionChosed {
+        if let optionChosed = modulChused {
         state = State(module: optionChosed)
-        navigationItem.title = firstName
+            navigationItem.title = optionChosed.rawValue
         }
     }
     
@@ -62,6 +62,9 @@ class RateModuleViewController: UITableViewController {
                 numberOfRightlyAnsweredCodeStructureQuestions: state.codeStructureQuestions.filter { $0.isPassed }.count,
                 numberOfCleanCodeQuestions: state.cleanCodeQuestions.count,
                 numberOfRightlyAnsweredCleanCodeQuestions: state.cleanCodeQuestions.filter { $0.isPassed }.count)
+            destination.firstName = firstName ?? ""
+            destination.lastName = lastName ?? ""
+            destination.modulChused = modulChused
         }
     }
 }

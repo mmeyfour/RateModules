@@ -12,7 +12,7 @@ class StudentViewController: UIViewController {
     
     // MARK: - Variables
     let module: [Module] = [.module2A,.module2B,.module3A,.module3B]
-    var optionChosed: Module = .module2A
+    var modulChused: Module = .module2A
     
     var firstName = ""
     var lastName = ""
@@ -55,7 +55,7 @@ class StudentViewController: UIViewController {
         guard segue.identifier == RateModuleViewController.rateModuleSegue, let rateModuleViewController = segue.destination as? RateModuleViewController else {return}
         rateModuleViewController.firstName = firstNameTextField.text
         rateModuleViewController.lastName = lastNameTextField.text
-        rateModuleViewController.optionChosed = optionChosed
+        rateModuleViewController.modulChused = modulChused
     }
     @IBAction func unwindToStudent(_ unwindSegue: UIStoryboardSegue) {
     }
@@ -78,7 +78,7 @@ extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         return module[row].rawValue
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        optionChosed = module[row]
+        modulChused = module[row]
     }
 }
 
