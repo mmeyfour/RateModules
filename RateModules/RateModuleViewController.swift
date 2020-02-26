@@ -12,7 +12,8 @@ class RateModuleViewController: UITableViewController {
     
     var state = State(module: Module.module3B)
     var optionChosed: Module?
-    var studentName: String?
+    var firstName: String?
+    var lastName: String?
     
     static let rateModuleSegue = "showRateModule"
     
@@ -20,7 +21,7 @@ class RateModuleViewController: UITableViewController {
         super.viewDidLoad()
         if let optionChosed = optionChosed {
         state = State(module: optionChosed)
-        navigationItem.title = studentName
+        navigationItem.title = firstName
         }
     }
     

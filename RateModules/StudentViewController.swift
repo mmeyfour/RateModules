@@ -27,6 +27,7 @@ class StudentViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     @IBAction func didRightName(_ sender: Any) {
+        button.isEnabled = true
     }
     @IBAction func didTappedButton(_ sender: UIButton) {
         performSegue(withIdentifier: RateModuleViewController.rateModuleSegue, sender: self)
@@ -43,13 +44,19 @@ class StudentViewController: UIViewController {
         lastNameTextField.text = ""
         button.isEnabled = false
     }
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? RateResultsViewController else{return}
+        guard let destination = segue.destination as? RateModuleViewController else{return}
         destination.firstName = firstName
         destination.lastName = lastName
     }
-    
+    */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == RateModuleViewController.rateModuleSegue, let rateModuleViewController = segue.destination as? RateModuleViewController else {return}
+        rateModuleViewController.firstName = firstNameTextField.text
+        rateModuleViewController.lastName = lastNameTextField.text
+        rateModuleViewController.optionChosed = optionChosed
+    }
     @IBAction func unwindToStudent(_ unwindSegue: UIStoryboardSegue) {
     }
     /*
@@ -78,7 +85,7 @@ extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 extension StudentViewController: UITextFieldDelegate {
     func textField(_ texField: UITextField) -> Bool {
         texField.resignFirstResponder()
-        if firstNameTextField.text == "" && lastNameTextField.text == "" {
+        if firstNameTextField.text == "" {
             button.isEnabled = false
         } else {
             button.isEnabled = true
