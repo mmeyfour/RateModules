@@ -45,12 +45,12 @@ class StudentViewController: UIViewController {
         button.isEnabled = false
     }
     /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? RateModuleViewController else{return}
-        destination.firstName = firstName
-        destination.lastName = lastName
-    }
-    */
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     guard let destination = segue.destination as? RateModuleViewController else{return}
+     destination.firstName = firstName
+     destination.lastName = lastName
+     }
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == RateModuleViewController.rateModuleSegue, let rateModuleViewController = segue.destination as? RateModuleViewController else {return}
         rateModuleViewController.firstName = firstNameTextField.text

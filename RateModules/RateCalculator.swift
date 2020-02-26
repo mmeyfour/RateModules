@@ -17,7 +17,7 @@ struct RateCalculator {
     let numberOfRightlyAnsweredCodeStructureQuestions: Int
     let numberOfCleanCodeQuestions: Int
     let numberOfRightlyAnsweredCleanCodeQuestions: Int
-   
+    
     var ratioDesignQuestions: Double {
         return numberOfDesignQuestions > 0 ? Double(numberOfRightlyAnsweredDesignQuestions) / Double(numberOfDesignQuestions) : 1.0
     }
@@ -45,6 +45,6 @@ struct RateCalculator {
     var rateAsPercent: Double {
         return totalRatio * 100.0
     }
-
+    
 }
 

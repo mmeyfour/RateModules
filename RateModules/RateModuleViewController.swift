@@ -20,7 +20,7 @@ class RateModuleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let optionChosed = modulChused {
-        state = State(module: optionChosed)
+            state = State(module: optionChosed)
             navigationItem.title = optionChosed.rawValue
         }
     }
@@ -103,7 +103,7 @@ extension RateModuleViewController {
         case 0:
             if state.hasDesignSection {
                 question = state.designQuestions![indexPath.row]
-// MARK: - PREGUNTA 2
+                // MARK: - PREGUNTA 2
                 question?.titleNumber = "(\(String(indexPath.row + 1)) / \(state.designQuestions?.count ?? 0))"
                 
             } else {
@@ -144,16 +144,16 @@ extension RateModuleViewController {
         let header = tableView.dequeueReusableCell(withIdentifier: "RateModuleSectionHeader")!
         
         switch section {
-            case 0:
-                header.textLabel?.text = state.hasDesignSection ? "Diseño(\(state.designQuestions?.count ?? 0))" : "Requisitos"
-            case 1:
-                header.textLabel?.text = state.hasDesignSection ? "Requisitos(\(state.requirementsQuestions.count))" : "Estructura de código"
-            case 2:
-                header.textLabel?.text = state.hasDesignSection ? "Estructura de código(\(state.codeStructureQuestions.count))": "Código limpio"
-            case 3:
-                header.textLabel?.text = state.hasDesignSection ? "Código limpio(\(state.cleanCodeQuestions.count))" : ""
-            default:
-                fatalError("Unexpected section")
+        case 0:
+            header.textLabel?.text = state.hasDesignSection ? "Diseño(\(state.designQuestions?.count ?? 0))" : "Requisitos"
+        case 1:
+            header.textLabel?.text = state.hasDesignSection ? "Requisitos(\(state.requirementsQuestions.count))" : "Estructura de código"
+        case 2:
+            header.textLabel?.text = state.hasDesignSection ? "Estructura de código(\(state.codeStructureQuestions.count))": "Código limpio"
+        case 3:
+            header.textLabel?.text = state.hasDesignSection ? "Código limpio(\(state.cleanCodeQuestions.count))" : ""
+        default:
+            fatalError("Unexpected section")
         }
         return header
     }

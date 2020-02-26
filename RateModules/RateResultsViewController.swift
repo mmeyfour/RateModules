@@ -11,7 +11,6 @@ import UIKit
 class RateResultsViewController: UIViewController {
     
     var rateCalculator: RateCalculator?
-    
     var firstName = ""
     var lastName = ""
     var modulChused : Module?
@@ -27,19 +26,26 @@ class RateResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let optionChosed = modulChused {
+            navigationItem.title = optionChosed.rawValue
+        }
+        
         guard let rateCalculator = rateCalculator else { return }
         
         if rateCalculator.hasPassed {
             resultEmojiLabel.text = "🥳"
+            studentNameLabel.textColor = UIColor.blue
         } else {
             resultEmojiLabel.text = "😔"
+            studentNameLabel.textColor = UIColor.red
         }
+        
         studentNameLabel.text = "\(firstName) \(lastName)"
         rateAsPercentLabel.text = NSString.init(format: "%.2f", rateCalculator.rateAsPercent) as String + " %"
         if !rateCalculator.hasPassed {
             rateAsPercentLabel.textColor = .red
         }
-
+        
         if rateCalculator.numberOfDesignQuestions > 0 {
             designRatioLabel.text = "Preguntas de diseño: \(rateCalculator.numberOfRightlyAnsweredDesignQuestions)/\(rateCalculator.numberOfDesignQuestions)"
         } else {
@@ -50,5 +56,5 @@ class RateResultsViewController: UIViewController {
         codeStructureRatioLabel.text = "Preguntas de estructura de código: \(rateCalculator.numberOfRightlyAnsweredCodeStructureQuestions)/\(rateCalculator.numberOfCodeStructureQuestions)"
         cleanCodeRatioLabel.text = "Preguntas de código limpio: \(rateCalculator.numberOfRightlyAnsweredCleanCodeQuestions)/\(rateCalculator.numberOfCleanCodeQuestions)"
     }
-
+    
 }

@@ -13,7 +13,7 @@ class QuestionTableViewCell: UITableViewCell {
     static let identifier = "QuestionTableViewCell"
     var delegate: QuestionTableViewCellDelegate?
     private var question: Question?
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var isPassedSwitch: UISwitch!
