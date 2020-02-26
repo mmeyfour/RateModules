@@ -171,7 +171,11 @@
                         <viewLayoutGuide key="safeArea" id="0n3-Qg-fby"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="mqi-yi-uJZ">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="jB4-tI-DdN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="jB4-tI-DdN">
+                            <connections>
+                                <segue destination="T7y-iN-b4l" kind="unwind" unwindAction="unwindToStudent:" id="upC-IF-kF6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cleanCodeRatioLabel" destination="Kso-XL-uvQ" id="HmV-BT-OK2"/>
@@ -183,13 +187,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg0-0m-UPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="T7y-iN-b4l" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1182" y="-286"/>
         </scene>
-        <!--View Controller-->
+        <!--Student View Controller-->
         <scene sceneID="Pe7-jw-hf1">
             <objects>
-                <viewController id="TCm-Zd-zw3" sceneMemberID="viewController">
+                <viewController id="TCm-Zd-zw3" customClass="StudentViewController" customModule="RateModules" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Man-Ol-jj9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,15 +214,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-oV-O4g">
                                                 <rect key="frame" x="0.0" y="26" width="343" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nombre" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
                                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                        <connections>
+                                                            <action selector="didRightName:" destination="TCm-Zd-zw3" eventType="editingDidEnd" id="FLZ-2a-LVt"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k2M-7p-rsn" userLabel="Apellidos">
                                                         <rect key="frame" x="175.5" y="0.0" width="167.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -232,6 +240,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="AwE-KE-NG4"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="TCm-Zd-zw3" id="DoQ-Pp-TiA"/>
+                                            <outlet property="delegate" destination="TCm-Zd-zw3" id="43s-Yr-Rla"/>
+                                        </connections>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-W4-GoL">
                                         <rect key="frame" x="0.0" y="292" width="343" height="42"/>
@@ -241,6 +253,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
+                                            <action selector="didTappedButton:" destination="TCm-Zd-zw3" eventType="touchUpInside" id="lwt-35-dxv"/>
                                             <segue destination="7F2-t0-enr" kind="presentation" modalPresentationStyle="fullScreen" id="VuO-b0-Sb9"/>
                                         </connections>
                                     </button>
@@ -257,6 +270,12 @@
                         <viewLayoutGuide key="safeArea" id="zJg-L3-isk"/>
                     </view>
                     <navigationItem key="navigationItem" id="jf1-XF-UDx"/>
+                    <connections>
+                        <outlet property="Button" destination="xdP-W4-GoL" id="tjj-JF-Oyy"/>
+                        <outlet property="firstNameTextField" destination="9vy-Fv-wDZ" id="hg0-yA-jXW"/>
+                        <outlet property="lastNameTextField" destination="k2M-7p-rsn" id="AUp-lq-XFm"/>
+                        <outlet property="modulePicker" destination="zU9-A2-5SC" id="9rG-Gk-NpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yal-lU-UCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

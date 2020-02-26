@@ -9,22 +9,70 @@
 import UIKit
 
 class StudentViewController: UIViewController {
-
+    
+    // MARK: - Variables
+    let module: [Module] = [.module2A,.module2B,.module3A,.module3B]
+    var optionChosed: Module = .module2A
+    var firstName = ""
+    var lastName = ""
+    // MARK: - IBOutlets
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
+    @IBOutlet weak var modulePicker: UIPickerView!
+    
+    @IBOutlet weak var Button: UIButton!
+    
+    @IBAction func didRightName(_ sender: Any) {
+        Button.isEnabled = true
+    }
+    @IBAction func didTappedButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "RateResultsViewController", sender: self)
+        firstName = firstNameTextField.text!
+        lastName = lastNameTextField.text!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //firstNameTextField.delegate = self
+        //lastNameTextField.delegate = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        firstNameTextField.text = ""
+        lastNameTextField.text = ""
+        Button.isEnabled = false
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? RateResultsViewController else{return}
+        destination.firstName = firstName
+        destination.lastName = lastName
+    }
+    
+    @IBAction func unwindToStudent(_ unwindSegue: UIStoryboardSegue) {
+    }
+    /*
+     override func performSegue(withIdentifier identifier: String, sender: Any?) {
+     <#code#>
+     }
+     */
 }
+
+extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return module.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return module[row].rawValue
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        optionChosed = module[row]
+    }
+}
+

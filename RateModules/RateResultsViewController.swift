@@ -11,7 +11,10 @@ import UIKit
 class RateResultsViewController: UIViewController {
     
     var rateCalculator: RateCalculator?
-
+    
+    var firstName: String?
+    var lastName: String?
+    
     @IBOutlet weak var resultEmojiLabel: UILabel!
     @IBOutlet weak var rateAsPercentLabel: UILabel!
     @IBOutlet weak var designRatioLabel: UILabel!
