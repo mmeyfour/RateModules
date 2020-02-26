@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="293.60000000000002" y="-287.40629685157421"/>
         </scene>
-        <!--Rate Results View Controller-->
+        <!--Title-->
         <scene sceneID="qvo-RD-9LB">
             <objects>
                 <viewController id="yUX-Wd-K0a" customClass="RateResultsViewController" customModule="RateModules" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +170,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0n3-Qg-fby"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Doj-jU-tpl"/>
+                    <navigationItem key="navigationItem" title="Title" id="mqi-yi-uJZ">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="jB4-tI-DdN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cleanCodeRatioLabel" destination="Kso-XL-uvQ" id="HmV-BT-OK2"/>
                         <outlet property="codeStructureRatioLabel" destination="IOY-Pf-9Zm" id="uOe-dP-2su"/>
@@ -239,7 +241,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="7F2-t0-enr" kind="show" id="VuO-b0-Sb9"/>
+                                            <segue destination="7F2-t0-enr" kind="presentation" modalPresentationStyle="fullScreen" id="VuO-b0-Sb9"/>
                                         </connections>
                                     </button>
                                 </subviews>
