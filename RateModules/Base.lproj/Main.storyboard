@@ -223,6 +223,9 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nombre" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
                                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="aId-aS-tdj"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                         <connections>
@@ -246,6 +249,7 @@
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.40000000000000002" height="0.65000000000000002"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="AwE-KE-NG4"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Gzb-jU-ncf"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="TCm-Zd-zw3" id="DoQ-Pp-TiA"/>
