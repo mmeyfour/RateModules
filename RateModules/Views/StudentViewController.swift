@@ -88,16 +88,11 @@ extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 extension StudentViewController: UITextFieldDelegate {
-    func textField(_ texField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        firstNameTextField.resignFirstResponder()
-        lastNameTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         
-        if firstNameTextField.text == "" {
-            button.isEnabled = false
-        } else {
-            button.isEnabled = true
-        }
         return true
     }
 }
+
