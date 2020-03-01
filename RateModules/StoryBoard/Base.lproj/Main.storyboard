@@ -111,6 +111,59 @@
             </objects>
             <point key="canvasLocation" x="293.60000000000002" y="-287.40629685157421"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Cv4-WU-qnL">
+            <objects>
+                <tableViewController id="Psu-WQ-V6b" customClass="RatingTableViewController" customModule="RateModules" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4H3-Sx-NR7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vga-Al-8Fy">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vga-Al-8Fy" id="6dp-CG-tkH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Psu-WQ-V6b" id="2yh-Ze-E2q"/>
+                            <outlet property="delegate" destination="Psu-WQ-V6b" id="duc-6Z-3Bu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="IkE-FK-6WG">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="dL0-jD-VbZ" userLabel="Done">
+                            <connections>
+                                <segue destination="LVc-tS-9jn" kind="unwind" unwindAction="unwindToStudentfromRegister:" id="emz-VK-2DV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDN-8j-GlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LVc-tS-9jn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="-1029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jxq-bo-k6p">
+            <objects>
+                <navigationController id="GmS-yf-b9y" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WAg-aI-lCT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GQZ-Va-Mb6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Psu-WQ-V6b" kind="relationship" relationship="rootViewController" id="wWo-ks-eja"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4DJ-gf-TPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="-1030"/>
+        </scene>
         <!--Title-->
         <scene sceneID="qvo-RD-9LB">
             <objects>
@@ -221,13 +274,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-oV-O4g">
                                                 <rect key="frame" x="0.0" y="26" width="343" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nombre" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
                                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="aId-aS-tdj"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="name"/>
                                                         <connections>
                                                             <action selector="didRightName:" destination="TCm-Zd-zw3" eventType="editingDidEnd" id="FLZ-2a-LVt"/>
                                                         </connections>
@@ -246,6 +299,7 @@
                                     </stackView>
                                     <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="zU9-A2-5SC">
                                         <rect key="frame" x="0.0" y="68" width="343" height="216"/>
+                                        <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.40000000000000002" height="0.65000000000000002"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="AwE-KE-NG4"/>
@@ -261,7 +315,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="2Fc-G5-oK9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="didTappedButton:" destination="TCm-Zd-zw3" eventType="touchUpInside" id="lwt-35-dxv"/>
@@ -272,14 +326,24 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UXL-3H-HUF" firstAttribute="top" secondItem="zJg-L3-isk" secondAttribute="top" constant="16" id="J3y-f6-xwt"/>
                             <constraint firstItem="zJg-L3-isk" firstAttribute="trailing" secondItem="UXL-3H-HUF" secondAttribute="trailing" constant="16" id="dIw-CO-zku"/>
                             <constraint firstItem="UXL-3H-HUF" firstAttribute="leading" secondItem="zJg-L3-isk" secondAttribute="leading" constant="16" id="ni3-IX-ivT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJg-L3-isk"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="m5d-jA-wl6" appends="YES" id="sQo-jb-q0R"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="jf1-XF-UDx"/>
+                    <navigationItem key="navigationItem" id="jf1-XF-UDx">
+                        <barButtonItem key="rightBarButtonItem" title="Ratings" id="JqK-Xg-uai" userLabel="Ratings">
+                            <connections>
+                                <segue destination="GmS-yf-b9y" kind="show" id="z6s-7z-W8I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="button" destination="xdP-W4-GoL" id="tjj-JF-Oyy"/>
                         <outlet property="firstNameTextField" destination="9vy-Fv-wDZ" id="hg0-yA-jXW"/>
@@ -288,6 +352,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yal-lU-UCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="m5d-jA-wl6"/>
             </objects>
             <point key="canvasLocation" x="-562" y="-287"/>
         </scene>

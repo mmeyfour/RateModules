@@ -19,6 +19,7 @@
 		0BF7809523DE363A007F8E8E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7809423DE363A007F8E8E /* State.swift */; };
 		0BF7809723DE3D4E007F8E8E /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */; };
 		0BF7809923DE3FD2007F8E8E /* RateResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */; };
+		502BDFD6240C63C200DBC3B8 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */; };
 		50EB1B4E240605A3004D4917 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB1B4D240605A3004D4917 /* StudentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		0BF7809423DE363A007F8E8E /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateResultsViewController.swift; sourceTree = "<group>"; };
+		502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
 		50EB1B4D240605A3004D4917 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,22 +72,55 @@
 		0BDF872A23DE04E500FD9083 /* RateModules */ = {
 			isa = PBXGroup;
 			children = (
-				0BDF872B23DE04E500FD9083 /* AppDelegate.swift */,
-				0BDF872D23DE04E500FD9083 /* SceneDelegate.swift */,
-				0BDF872F23DE04E500FD9083 /* RateModuleViewController.swift */,
-				0BDF873123DE04E500FD9083 /* Main.storyboard */,
+				502BDFD4240C4CDF00DBC3B8 /* StoryBoard */,
+				502BDFD3240C4CD400DBC3B8 /* Models */,
+				502BDFD2240C4CCA00DBC3B8 /* Delegate */,
+				502BDFD1240C4CBC00DBC3B8 /* Views */,
 				0BDF873423DE04E700FD9083 /* Assets.xcassets */,
-				0BDF873623DE04E700FD9083 /* LaunchScreen.storyboard */,
 				0BDF873923DE04E700FD9083 /* Info.plist */,
-				0BEE035B23DE0A08007C9E35 /* QuestionTableViewCell.swift */,
-				0BF7809023DE0C3C007F8E8E /* Question.swift */,
-				0BF7809223DE15A8007F8E8E /* QuestionTableViewCellDelegate.swift */,
-				0BF7809423DE363A007F8E8E /* State.swift */,
-				0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */,
-				0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */,
-				50EB1B4D240605A3004D4917 /* StudentViewController.swift */,
 			);
 			path = RateModules;
+			sourceTree = "<group>";
+		};
+		502BDFD1240C4CBC00DBC3B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BDF872F23DE04E500FD9083 /* RateModuleViewController.swift */,
+				0BEE035B23DE0A08007C9E35 /* QuestionTableViewCell.swift */,
+				0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */,
+				50EB1B4D240605A3004D4917 /* StudentViewController.swift */,
+				502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		502BDFD2240C4CCA00DBC3B8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				0BDF872B23DE04E500FD9083 /* AppDelegate.swift */,
+				0BDF872D23DE04E500FD9083 /* SceneDelegate.swift */,
+				0BF7809223DE15A8007F8E8E /* QuestionTableViewCellDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		502BDFD3240C4CD400DBC3B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BF7809023DE0C3C007F8E8E /* Question.swift */,
+				0BF7809423DE363A007F8E8E /* State.swift */,
+				0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		502BDFD4240C4CDF00DBC3B8 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				0BDF873123DE04E500FD9083 /* Main.storyboard */,
+				0BDF873623DE04E700FD9083 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +200,7 @@
 				0BDF873023DE04E500FD9083 /* RateModuleViewController.swift in Sources */,
 				0BF7809323DE15A8007F8E8E /* QuestionTableViewCellDelegate.swift in Sources */,
 				0BEE035C23DE0A08007C9E35 /* QuestionTableViewCell.swift in Sources */,
+				502BDFD6240C63C200DBC3B8 /* RatingTableViewController.swift in Sources */,
 				0BDF872C23DE04E500FD9083 /* AppDelegate.swift in Sources */,
 				0BF7809723DE3D4E007F8E8E /* RateCalculator.swift in Sources */,
 				0BF7809523DE363A007F8E8E /* State.swift in Sources */,

@@ -27,6 +27,7 @@ class StudentViewController: UIViewController {
     }
     @IBAction func didTappedButton(_ sender: UIButton) {
         performSegue(withIdentifier: RateModuleViewController.rateModuleSegue, sender: self)
+        
         // MARK: - Function
     }
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ class StudentViewController: UIViewController {
     }
     // MARK: - Unwind
     @IBAction func unwindToStudent(_ unwindSegue: UIStoryboardSegue) {
+    }
+    @IBAction func unwindToStudentfromRegister(_ unwindSegue: UIStoryboardSegue) {
     }
     /*
      override func performSegue(withIdentifier identifier: String, sender: Any?) {
