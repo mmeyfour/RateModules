@@ -135,7 +135,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="IkE-FK-6WG">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="dL0-jD-VbZ" userLabel="Done">
+                        <barButtonItem key="rightBarButtonItem" title="Back" id="dL0-jD-VbZ" userLabel="Done">
                             <connections>
                                 <segue destination="LVc-tS-9jn" kind="unwind" unwindAction="unwindToStudentfromRegister:" id="emz-VK-2DV"/>
                             </connections>
