@@ -274,13 +274,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jth-oV-O4g">
                                                 <rect key="frame" x="0.0" y="26" width="343" height="34"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-Fv-wDZ" userLabel="Nombre">
                                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="aId-aS-tdj"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                                         <connections>
                                                             <action selector="didRightName:" destination="TCm-Zd-zw3" eventType="editingDidEnd" id="FLZ-2a-LVt"/>
                                                         </connections>
@@ -340,7 +340,7 @@
                     <navigationItem key="navigationItem" id="jf1-XF-UDx">
                         <barButtonItem key="rightBarButtonItem" title="Ratings" id="JqK-Xg-uai" userLabel="Ratings">
                             <connections>
-                                <segue destination="GmS-yf-b9y" kind="show" id="z6s-7z-W8I"/>
+                                <segue destination="GmS-yf-b9y" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="z6s-7z-W8I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -352,7 +352,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yal-lU-UCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="m5d-jA-wl6"/>
+                <tapGestureRecognizer id="m5d-jA-wl6">
+                    <connections>
+                        <action selector="didTappedOutside:" destination="TCm-Zd-zw3" id="E8E-OQ-D6K"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-562" y="-287"/>
         </scene>

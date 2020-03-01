@@ -25,6 +25,10 @@ class StudentViewController: UIViewController {
     @IBAction func didRightName(_ sender: Any) {
         button.isEnabled = true
     }
+    
+    @IBAction func didTappedOutside(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
     @IBAction func didTappedButton(_ sender: UIButton) {
         performSegue(withIdentifier: RateModuleViewController.rateModuleSegue, sender: self)
         
@@ -85,7 +89,10 @@ extension StudentViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension StudentViewController: UITextFieldDelegate {
     func textField(_ texField: UITextField) -> Bool {
-        texField.resignFirstResponder()
+        
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        
         if firstNameTextField.text == "" {
             button.isEnabled = false
         } else {
