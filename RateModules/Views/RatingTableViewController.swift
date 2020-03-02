@@ -21,17 +21,11 @@ class RatingTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         tableView.reloadData()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -47,7 +41,10 @@ class RatingTableViewController: UITableViewController {
         
         let studentList = studentsList![indexPath.row]
         
-        cell.textLabel?.text = "\(studentList.firstName) \(studentList.lastName) - \(studentList.module)"
+        cell.textLabel?.text = "\(studentList.firstName) \(studentList.lastName) - \(studentList.module) \(studentList.totalRatio) \(studentList.emoji)"
+        
+
+        
         cell.detailTextLabel?.text = "Ratio: \(studentList.totalRatio) \(studentList.emoji)"
         
         return cell
