@@ -9,7 +9,7 @@
 import Foundation
 
 struct StudentsList {
-    var firstname: String
+    var firstName: String
     var lastName: String
     var module: String
     var emoji: String

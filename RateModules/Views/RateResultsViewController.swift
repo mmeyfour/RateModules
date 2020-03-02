@@ -11,7 +11,7 @@ import UIKit
 class RateResultsViewController: UIViewController {
     
     var rateCalculator: RateCalculator?
-    var noteStudent = StudentsList(firstname: "", lastName: "", module: "", emoji: "", totalRatio: "")
+    var noteStudent = StudentsList(firstName: "", lastName: "", module: "", emoji: "", totalRatio: "")
     var firstName = ""
     var lastName = ""
     var modulChused : Module?
@@ -58,7 +58,7 @@ class RateResultsViewController: UIViewController {
         codeStructureRatioLabel.text = "Preguntas de estructura de código: \(rateCalculator.numberOfRightlyAnsweredCodeStructureQuestions)/\(rateCalculator.numberOfCodeStructureQuestions)"
         cleanCodeRatioLabel.text = "Preguntas de código limpio: \(rateCalculator.numberOfRightlyAnsweredCleanCodeQuestions)/\(rateCalculator.numberOfCleanCodeQuestions)"
     
-        noteStudent.firstname = firstName
+        noteStudent.firstName = firstName
         noteStudent.lastName = lastName
         noteStudent.module = modulChused!.rawValue
         noteStudent.emoji = resultEmojiLabel.text!
