@@ -11,6 +11,7 @@ import UIKit
 class RateResultsViewController: UIViewController {
     
     var rateCalculator: RateCalculator?
+    var noteStudent = StudentsList(firstname: "", lastName: "", module: "", emoji: "", totalRatio: "")
     var firstName = ""
     var lastName = ""
     var modulChused : Module?
@@ -56,6 +57,20 @@ class RateResultsViewController: UIViewController {
         requirementsRatioLabel.text = "Preguntas de requisitos: \(rateCalculator.numberOfRightlyAnsweredRequirementQuestions)/\(rateCalculator.numberOfRequirementQuestions)"
         codeStructureRatioLabel.text = "Preguntas de estructura de código: \(rateCalculator.numberOfRightlyAnsweredCodeStructureQuestions)/\(rateCalculator.numberOfCodeStructureQuestions)"
         cleanCodeRatioLabel.text = "Preguntas de código limpio: \(rateCalculator.numberOfRightlyAnsweredCleanCodeQuestions)/\(rateCalculator.numberOfCleanCodeQuestions)"
-    }
     
+        noteStudent.firstname = firstName
+        noteStudent.lastName = lastName
+        noteStudent.module = modulChused!.rawValue
+        noteStudent.emoji = resultEmojiLabel.text!
+        noteStudent.totalRatio = String(rateCalculator.totalRatio*100)
+        print(noteStudent)
+        
+        saveStudent(studentList: noteStudent)
+    }
+    func saveStudent(studentList: StudentsList) {
+        var studentsList: [StudentsList] = StudentsList.loadFromFile()
+        studentsList.append(studentList)
+        print(studentsList)
+        StudentsList.saveToFile(rates: studentsList)
+    }
 }

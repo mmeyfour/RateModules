@@ -20,6 +20,7 @@
 		0BF7809723DE3D4E007F8E8E /* RateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */; };
 		0BF7809923DE3FD2007F8E8E /* RateResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */; };
 		502BDFD6240C63C200DBC3B8 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */; };
+		502BDFD8240C7E8100DBC3B8 /* StudentsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BDFD7240C7E8100DBC3B8 /* StudentsList.swift */; };
 		50EB1B4E240605A3004D4917 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB1B4D240605A3004D4917 /* StudentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateResultsViewController.swift; sourceTree = "<group>"; };
 		502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
+		502BDFD7240C7E8100DBC3B8 /* StudentsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsList.swift; sourceTree = "<group>"; };
 		50EB1B4D240605A3004D4917 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				0BF7809023DE0C3C007F8E8E /* Question.swift */,
 				0BF7809423DE363A007F8E8E /* State.swift */,
 				0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */,
+				502BDFD7240C7E8100DBC3B8 /* StudentsList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				50EB1B4E240605A3004D4917 /* StudentViewController.swift in Sources */,
 				0BF7809123DE0C3C007F8E8E /* Question.swift in Sources */,
 				0BF7809923DE3FD2007F8E8E /* RateResultsViewController.swift in Sources */,
+				502BDFD8240C7E8100DBC3B8 /* StudentsList.swift in Sources */,
 				0BDF873023DE04E500FD9083 /* RateModuleViewController.swift in Sources */,
 				0BF7809323DE15A8007F8E8E /* QuestionTableViewCellDelegate.swift in Sources */,
 				0BEE035C23DE0A08007C9E35 /* QuestionTableViewCell.swift in Sources */,
