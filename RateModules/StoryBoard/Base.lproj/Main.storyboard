@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="293.60000000000002" y="-287.40629685157421"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Student List-->
         <scene sceneID="Cv4-WU-qnL">
             <objects>
                 <tableViewController id="Psu-WQ-V6b" customClass="RatingTableViewController" customModule="RateModules" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,17 +126,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vga-Al-8Fy" id="6dp-CG-tkH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sxj-D3-r4Z">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="sxj-D3-r4Z" secondAttribute="bottom" constant="-0.5" id="Jd7-bD-p64"/>
-                                        <constraint firstItem="sxj-D3-r4Z" firstAttribute="leading" secondItem="6dp-CG-tkH" secondAttribute="leading" constant="16" id="Poi-Ip-e7U"/>
-                                        <constraint firstItem="sxj-D3-r4Z" firstAttribute="top" secondItem="6dp-CG-tkH" secondAttribute="top" id="WwW-LY-xv4"/>
-                                        <constraint firstAttribute="trailing" secondItem="sxj-D3-r4Z" secondAttribute="trailing" constant="16" id="aB7-ib-6A7"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -145,7 +134,7 @@
                             <outlet property="delegate" destination="Psu-WQ-V6b" id="duc-6Z-3Bu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="IkE-FK-6WG">
+                    <navigationItem key="navigationItem" title="Student List" id="IkE-FK-6WG">
                         <barButtonItem key="rightBarButtonItem" title="Back" id="dL0-jD-VbZ" userLabel="Done">
                             <connections>
                                 <segue destination="LVc-tS-9jn" kind="unwind" unwindAction="unwindToStudentfromRegister:" id="emz-VK-2DV"/>

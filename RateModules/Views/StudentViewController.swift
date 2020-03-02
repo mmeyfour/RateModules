@@ -55,8 +55,8 @@ class StudentViewController: UIViewController {
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == RateModuleViewController.rateModuleSegue, let rateModuleViewController = segue.destination as? RateModuleViewController else {return}
-        rateModuleViewController.firstName = firstNameTextField.text
-        rateModuleViewController.lastName = lastNameTextField.text
+        rateModuleViewController.firstName = firstNameTextField.text ?? ""
+        rateModuleViewController.lastName = lastNameTextField.text ?? ""
         rateModuleViewController.modulChused = modulChused
     }
     // MARK: - Unwind

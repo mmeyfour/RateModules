@@ -12,15 +12,15 @@ class RateModuleViewController: UITableViewController {
     
     var state = State(module: Module.module3B)
     var modulChused: Module?
-    var firstName: String?
-    var lastName: String?
+    var firstName = ""
+    var lastName = ""
     
     static let rateModuleSegue = "showRateModule"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let optionChosed = modulChused {
-            navigationItem.title = optionChosed.rawValue
+            navigationItem.title = "\(firstName) \(lastName.first?.uppercased() ?? "@"). \(optionChosed.rawValue.dropFirst(7))"
         }
     }
     
@@ -61,8 +61,8 @@ class RateModuleViewController: UITableViewController {
                 numberOfRightlyAnsweredCodeStructureQuestions: state.codeStructureQuestions.filter { $0.isPassed }.count,
                 numberOfCleanCodeQuestions: state.cleanCodeQuestions.count,
                 numberOfRightlyAnsweredCleanCodeQuestions: state.cleanCodeQuestions.filter { $0.isPassed }.count)
-            destination.firstName = firstName ?? ""
-            destination.lastName = lastName ?? ""
+            destination.firstName = firstName
+            destination.lastName = lastName
             destination.modulChused = modulChused
         }
     }

@@ -41,10 +41,8 @@ class RatingTableViewController: UITableViewController {
         
         let studentList = studentsList![indexPath.row]
         
-        cell.textLabel?.text = "\(studentList.firstName) \(studentList.lastName) - \(studentList.module) \(studentList.totalRatio) \(studentList.emoji)"
-        
-
-        
+        cell.textLabel?.text = "\(studentList.firstName) \(studentList.lastName) - \(studentList.module.dropFirst(7)) \(studentList.totalRatio) \(studentList.emoji)"
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.detailTextLabel?.text = "Ratio: \(studentList.totalRatio) \(studentList.emoji)"
         
         return cell
