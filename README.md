@@ -4,4 +4,4 @@ Our mini app RateModule has served us to apply a correction staffing for the cou
 It has a table view that shows the questions from each section with a dial switch to mark is passed or not.
 We can also sail to a results screen to see the final note, broken down by section.
 
-![](https://github.com/mmeyfour/RateModules/blob/master/RateModules.gif)
+![](https://github.com/mmeyfour/RateModules/blob/newMethod/RateModules.gif)
