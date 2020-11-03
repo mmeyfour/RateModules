@@ -39,8 +39,10 @@
 		0BF7809423DE363A007F8E8E /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		0BF7809623DE3D4E007F8E8E /* RateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCalculator.swift; sourceTree = "<group>"; };
 		0BF7809823DE3FD2007F8E8E /* RateResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateResultsViewController.swift; sourceTree = "<group>"; };
+		50299F8A255222CC00171170 /* RateModules.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RateModules.gif; sourceTree = "<group>"; };
 		502BDFD5240C63C200DBC3B8 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
 		502BDFD7240C7E8100DBC3B8 /* StudentsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsList.swift; sourceTree = "<group>"; };
+		505C9E1825521F9E00BDF4D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		50EB1B4D240605A3004D4917 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,8 @@
 		0BDF871F23DE04E500FD9083 = {
 			isa = PBXGroup;
 			children = (
+				505C9E1825521F9E00BDF4D3 /* README.md */,
+				50299F8A255222CC00171170 /* RateModules.gif */,
 				0BDF872A23DE04E500FD9083 /* RateModules */,
 				0BDF872923DE04E500FD9083 /* Products */,
 			);
